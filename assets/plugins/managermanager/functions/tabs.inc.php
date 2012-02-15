@@ -87,6 +87,12 @@ function mm_hideTabs($tabs, $roles='', $templates='') {
 					$output .= '$j("div#documentPane h2:nth-child(2)").hide(); ' . "\n";
 					$output .= '$j("#tabSettings").hide();';
 				break;
+				// for installations that have tv_categorized_tabs plugin installed
+				case 'tvs': 
+					$output .= 'if (tpSettings.getSelectedIndex() == 1) { tpSettings.setSelectedIndex(0); } ' . "\n";
+					$output .= '$j("div#documentPane h2#tabTV-header").hide(); ' . "\n";
+					$output .= '$j("#tabTV").hide();';
+				break;
 				
 				// =< v1.0.0 only
 				case 'meta': 
