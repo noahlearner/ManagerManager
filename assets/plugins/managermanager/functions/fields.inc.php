@@ -99,12 +99,12 @@ function mm_hideFields($fields, $roles='', $templates='') {
 						
 				case 'hidemenu':
 				case 'show_in_menu':
-					$output .= '$j("input[name=hidemenucheck]").parent("td").hide();';
+					$output .= '$j("input[name=hidemenucheck]").parents("tr").hide();';
 				break;
 						
 				case 'menuindex':
-					$output .= '$j("input[name=menuindex]").parents("table").parent("td").prev("td").children("span.warning").hide();' ."\n";
-					$output .= '$j("input[name=menuindex]").parent("td").hide();';
+					$output .='$j("input[name=menuindex]").parents("table").parent("td").prev("td").children("span.warning").hide();' ."\n";
+					$output .= '$j("input[name=menuindex]").parents("tr").hide();';
 				break;
 				
 				case 'which_editor':
