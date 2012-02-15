@@ -40,7 +40,7 @@ function mm_renameTab($tab, $newname, $roles='', $templates='') {
 					$output .= '$j("div#documentPane h2:nth-child('.$access_index .') span").empty().prepend("'.jsSafe($newname).'");' . "\n";
 				break;
 				
-				// for installations that have tv_categorized_tabs plugin installed
+				// for installations that have tv_categorized_tabs plugin installed ni system
 				case 'tvs':  
 					$output .= '$j("div#documentPane h2#tabTV-header span").empty().prepend("'.jsSafe($newname).'");' . "\n";				
 					break;
